@@ -38,8 +38,13 @@
 					    } else if (alphaValue < alphaCalcChange) {
 					        alphaCalc = 'rgba(' + opts.bkgColor + ',' + alphaCalcChange + ')';
 					        $t.css('background-color', alphaCalc);
-					    }			
-					}, opts.intervalSpeed);
+					    }
+					    if (alphaCalcChange >= opts.customBreakPointValue) {
+					    	$t.addClass(opts.halfWayMarkClass);
+					    } else if (alphaCalcChange < opts.customBreakPointValue) {
+					    	$t.removeClass(opts.halfWayMarkClass);
+					    }		
+					}, opts.refreshRate);
 					scroll = false;
 				} else if (scroll == true && scrollAmount >= itemHeight) {
 					$t.css('background-color', 'rgba(' + opts.bkgColor + ', 1)');
@@ -57,8 +62,7 @@
 	    fadeOnHover: true,
 	    fadeOnHoverClass: 'hover',
 	    removeOnHoverClassDelay: 200,
-	    inverse: 1
+	   	halfWayMarkClass: 'half-way',
+	   	customBreakPointValue: 0.5,
 	};
 }( jQuery ));
-
- 

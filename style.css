@@ -15,10 +15,16 @@
 .navbar-default .navbar-brand,
 .navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>li>a {
-	color: #FFF;
-	text-shadow: 0 0 3px #666;
+	color: #333;
 	font-weight: bold;
 	font-size: 20px;
+	transition: all 0.4s linear;
+}
+
+.half-way.navbar-default .navbar-brand,
+.half-way.navbar-default .navbar-nav>.active>a,
+.half-way.navbar-default .navbar-nav>li>a {
+	color: #FFF;
 }
 
 .navbar-default .navbar-nav>.active>a, 
