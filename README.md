@@ -25,3 +25,9 @@ $('.navbar').fadingNav({
     fadeOnHover: false
 });
 ```
+
+I have included all the basic features needed for v1.0
+
+### To Do for v1.x:
+* Add a feature to revers the opacity direction.
+* Add a feature to change the text color inside the nav as you scroll.
