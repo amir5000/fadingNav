@@ -12,13 +12,24 @@
 				itemHeight		= opts.itemHeight.height();
 				alphaValue		= opts.alpha;
 				alphaCalcChange	= scrollAmount / itemHeight;
-
-				$t.on('mouseenter', function() {
-					$t.css('background-color', 'rgba(' + opts.bkgColor + ', 1)');
-				});
-				$t.on('mouseleave', function() {
-					$t.css('background-color', 'rgba(' + opts.bkgColor + ',' + alphaCalcChange + ')');
-				});
+				if (opts.fadeOnHover === true) {
+					$t.on('mouseenter', function() {
+						$t.css('background-color', 'rgba(' + opts.bkgColor + ', 1)').addClass(opts.fadeOnHoverClass);
+					});
+					if (scrollAmount === 0 || alphaValue >= alphaCalcChange ) {
+						$t.on('mouseleave', function() {
+							$t.css('background-color', 'rgba(' + opts.bkgColor + ',' + alphaValue + ')').delay(opts.removeOnHoverClassDelay).queue(function(){
+                    			$t.removeClass(opts.fadeOnHoverClass).dequeue();
+                    		});
+						});
+					} else {
+						$t.on('mouseleave', function() {
+							$t.css('background-color', 'rgba(' + opts.bkgColor + ',' + alphaCalcChange + ')').delay(opts.removeOnHoverClassDelay).queue(function(){
+                    			$t.removeClass(opts.fadeOnHoverClass).dequeue();
+                    		});
+						});
+					}
+				}
 				if (scroll == true && scrollAmount < itemHeight) {
 					setTimeout(function() {				
 					    if (scrollAmount === 0 || alphaValue >= alphaCalcChange ) {
@@ -43,6 +54,9 @@
 	    alpha: 0,
 	    itemHeight: $(".banner"),
 	    refreshRate: 50,
+	    fadeOnHover: true,
+	    fadeOnHoverClass: 'hover',
+	    removeOnHoverClassDelay: 200,
 	    inverse: 1
 	};
 }( jQuery ));

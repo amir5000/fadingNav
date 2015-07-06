@@ -8,6 +8,10 @@
 	padding: 30px 20px;
 }
 
+.hover {
+	transition: all 0.2s linear;
+}
+
 .navbar-default .navbar-brand,
 .navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>li>a {
