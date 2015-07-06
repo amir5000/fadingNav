@@ -11,6 +11,7 @@ $('.navbar').fadingNav();
 * **bkgColor**: '0, 0, 0' - background default color in RGB.
 * **alpha**: 0 - change the starting alpha opacity, valid number is from 0 - 1.
 * **itemHeight**: $(".banner") - the height of a container selector that once you reach the end of it the NavBar becomes 100% alpha.
+* **refreshRate**: 50 - change the scroll refresh rate, don't touch this unless you know what you are doing.
 
 All options can be overridden when initilizing the plugin like this:
 
