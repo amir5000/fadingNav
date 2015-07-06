@@ -16,7 +16,7 @@ All options can be overridden when initilizing the plugin like this:
 
 ```
 $('.navbar').fadingNav({
-    bkgColor: '22, 124, 1244',
-    alpha: 0.3
+    bkgColor: '22, 124, 124',
+    alpha: 0.2
 });
 ```
