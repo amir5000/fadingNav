@@ -18,12 +18,15 @@
 	color: #333;
 	font-weight: bold;
 	font-size: 20px;
-	transition: all 0.4s linear;
+	transition: all 0.2s linear;
 }
 
-.half-way.navbar-default .navbar-brand,
-.half-way.navbar-default .navbar-nav>.active>a,
-.half-way.navbar-default .navbar-nav>li>a {
+.break-point.navbar-default .navbar-brand,
+.break-point.navbar-default .navbar-nav>.active>a,
+.break-point.navbar-default .navbar-nav>li>a,
+.hover.navbar-default .navbar-brand,
+.hover.navbar-default .navbar-nav>.active>a,
+.hover.navbar-default .navbar-nav>li>a {
 	color: #FFF;
 }
 

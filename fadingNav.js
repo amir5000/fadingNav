@@ -39,11 +39,13 @@
 					        alphaCalc = 'rgba(' + opts.bkgColor + ',' + alphaCalcChange + ')';
 					        $t.css('background-color', alphaCalc);
 					    }
-					    if (alphaCalcChange >= opts.customBreakPointValue) {
-					    	$t.addClass(opts.halfWayMarkClass);
-					    } else if (alphaCalcChange < opts.customBreakPointValue) {
-					    	$t.removeClass(opts.halfWayMarkClass);
-					    }		
+					    if (opts.enableBreakPoint === true) {
+						    if (alphaCalcChange >= opts.breakPointValue) {
+						    	$t.addClass(opts.breakPointClass);
+						    } else if (alphaCalcChange < opts.breakPointValue) {
+						    	$t.removeClass(opts.breakPointClass);
+						    }
+						}
 					}, opts.refreshRate);
 					scroll = false;
 				} else if (scroll == true && scrollAmount >= itemHeight) {
@@ -62,7 +64,8 @@
 	    fadeOnHover: true,
 	    fadeOnHoverClass: 'hover',
 	    removeOnHoverClassDelay: 200,
-	   	halfWayMarkClass: 'half-way',
-	   	customBreakPointValue: 0.5,
+	    enableBreakPoint: true,
+	   	breakPointClass: 'break-point',
+	   	breakPointValue: 0.5,
 	};
 }( jQuery ));
