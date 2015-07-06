@@ -9,7 +9,7 @@ $('.navbar').fadingNav();
 ### default options:
 
 * **bkgColor**: '0, 0, 0' - background default color in RGB.
-* **alpha**: 0 - to change the starting alpha opacity.
+* **alpha**: 0 - change the starting alpha opacity, valid number is from 0 - 1.
 * **itemHeight**: $(".banner") - the height of a container selector that once you reach the end of it the NavBar becomes 100% alpha.
 
 All options can be overridden when initilizing the plugin like this:
