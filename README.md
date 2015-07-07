@@ -6,6 +6,8 @@ to initialize the plugin just select your navbar and call the fadingNav plugin
 $('.navbar').fadingNav();
 ```
 
+**[DEMO1](http://amir5000.github.io/fadingNav/)**
+
 ### default options:
 
 * **bkgColor**: '0, 0, 0' - a string value for the background default color in RGB.
