@@ -8,10 +8,10 @@ $('.navbar').fadingNav();
 
 **[DEMO1](http://amir5000.github.io/fadingNav/)**
 
-### default options:
+### Default options:
 
 * **bkgColor**: '0, 0, 0' - a string value for the background default color in RGB.
-* **alpha**: 0 - an int value to change the starting alpha opacity, valid number is from 0 - 1.
+* **alpha**: 0 - an int value from 0 - 1 to change the starting alpha opacity.
 * **itemHeight**: $(".banner") - the height of a container selector that once you reach the end of it the NavBar becomes 100% alpha.
 * **refreshRate**: 50 - change the scroll refresh rate, don't touch this unless you know what you are doing.
 * **fadeOnHover**: true - a boolean value to turn on or off the on hover feature.
@@ -35,4 +35,3 @@ I have included all the basic features needed for v1.0
 
 ### To Do for v1.x:
 * Add a feature to revers the opacity direction.
-* Add a feature to change the text color inside the nav as you scroll.
