@@ -19,7 +19,7 @@ $('.navbar').fadingNav();
 * **removeOnHoverClassDelay**: 200 - a number of miliseconds delay when removing the on hover class (Note: you will need to make sure this is the same as the CSS transition length in your CSS file.)
 * **enableBreakPoint**: true - This option enables a breakpoint that which a class will get added or removed for styling inside the NavBar once you scroll to a certain point.
 * **breakPointClass**: 'break-point' - this is the class added once the breakpoint is reached.
-* **breakPointValue**: 0.5 - the value of the which the class will get added 0 is the top and 1 is the very end of the itemHeight container height.
+* **breakPointValue**: 0.5 - the value of the which the class will get added once the breakpoint is reached. (0 is the top and 1 is the very end of the itemHeight container height.)
 
 All options can be overridden when initilizing the plugin like this:
 
