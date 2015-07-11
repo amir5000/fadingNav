@@ -18,13 +18,13 @@
 					});
 					if (scrollAmount === 0 || alphaValue >= alphaCalcChange ) {
 						$t.on('mouseleave', function() {
-							$t.css('background-color', 'rgba(' + opts.bkgColor + ',' + alphaValue + ')').delay(opts.removeOnHoverClassDelay).queue(function(){
+							$t.css('background-color', 'rgba(' + opts.bkgColor + ',' + alphaValue + ')').stop().delay(opts.removeOnHoverClassDelay).queue(function(){
                     			$t.removeClass(opts.fadeOnHoverClass).dequeue();
                     		});
 						});
-					} else {
+					} else if (scrollAmount !== 0 && alphaValue < alphaCalcChange) {
 						$t.on('mouseleave', function() {
-							$t.css('background-color', 'rgba(' + opts.bkgColor + ',' + alphaCalcChange + ')').delay(opts.removeOnHoverClassDelay).queue(function(){
+							$t.css('background-color', 'rgba(' + opts.bkgColor + ',' + alphaCalcChange + ')').stop().delay(opts.removeOnHoverClassDelay).queue(function(){
                     			$t.removeClass(opts.fadeOnHoverClass).dequeue();
                     		});
 						});
@@ -62,7 +62,7 @@
 	    itemHeight: $(".banner"),
 	    refreshRate: 50,
 	    fadeOnHover: true,
-	    fadeOnHoverClass: 'hover',
+	    fadeOnHoverClass: 'hover-class',
 	    removeOnHoverClassDelay: 200,
 	    enableBreakPoint: true,
 	   	breakPointClass: 'break-point',

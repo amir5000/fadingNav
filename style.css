@@ -8,7 +8,7 @@
 	padding: 30px 20px;
 }
 
-.hover {
+.hover-class {
 	transition: all 0.2s linear;
 }
 
@@ -24,9 +24,9 @@
 .break-point.navbar-default .navbar-brand,
 .break-point.navbar-default .navbar-nav>.active>a,
 .break-point.navbar-default .navbar-nav>li>a,
-.hover.navbar-default .navbar-brand,
-.hover.navbar-default .navbar-nav>.active>a,
-.hover.navbar-default .navbar-nav>li>a {
+.hover-class.navbar-default .navbar-brand,
+.hover-class.navbar-default .navbar-nav>.active>a,
+.hover-class.navbar-default .navbar-nav>li>a {
 	color: #FFF;
 }
 
