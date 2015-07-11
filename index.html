@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Fading Navbar Demo</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="style.css">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fading Navbar Demo</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
 </head>
 <body>
 
 <header>
-	<nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -22,7 +29,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>A
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -37,21 +44,22 @@
 </nav>
 </header>
 <div class="container">
-	<div class="jumbotron">
-		<div class="banner">
-			<h1>Fading Navbar Demo</h1>
-			<p>Built with the basic and default fixed Navbar in Bootstrap</p>
-		</div>
-	</div>
+  <div class="jumbotron">
+    <div class="banner">
+      <h1>Fading Navbar Demo</h1>
+      <p>Built with the basic and default fixed Navbar in Bootstrap v3+</p>
+    </div>
+  </div>
 </div>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="fadingNav.js"></script>
 <script type="text/javascript">
-	$('.navbar').fadingNav({
-	    bkgColor: '22, 24, 224',
-	    alpha: 0,
-	});
+  $('.navbar').fadingNav({
+      bkgColor: '22, 24, 224',
+      alpha: 0.2,
+      fadeOnHover: false
+  });
 </script>
 </body>
 </html>
