@@ -4,12 +4,30 @@
 
 .banner {
 	height: 600px;
-	background-color: lightpink;
+	background-color: #89f5ff;
 	padding: 30px 20px;
+}
+
+.container .jumbotron, 
+.container-fluid .jumbotron {
+  padding-top: 50px;
 }
 
 .hover-class {
 	transition: all 0.2s linear;
+}
+
+.break-point .navbar-toggle,
+.break-point .navbar-toggle:focus, 
+.break-point .navbar-toggle:hover,
+.hover-class .navbar-toggle,
+.hover-class .navbar-toggle:focus, 
+.hover-class .navbar-toggle:hover {
+  background-color: #fff;
+}
+
+.hover-class .navbar-toggle {
+  border-color: #fff;
 }
 
 .navbar-default .navbar-brand,

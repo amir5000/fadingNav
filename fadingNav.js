@@ -2,11 +2,12 @@
 	$.fn.fadingNav = function(options) {
 		var scroll = false;
 		var opts = $.extend( {}, $.fn.fadingNav.defaults, options );
-		var $t, scrollAmount, alphaValue, alphaCalc, alphaCalcChange, itemHeight;
+		var $t, scrollAmount, alphaValue, alphaCalc, alphaCalcChange, itemHeight, mouseIsEntered;
 		this.each(function() {
 			$t = $(this);
 			$(window).on('load scroll', function(){
 				scroll			= true;
+				mouseIsEntered	= false;
 				scrollAmount	= $(window).scrollTop();
 				alphaCalc		= opts.bkgColor;
 				itemHeight		= opts.itemHeight.height();
@@ -14,23 +15,25 @@
 				alphaCalcChange	= scrollAmount / itemHeight;
 				if (opts.fadeOnHover === true) {
 					$t.on('mouseenter', function() {
+						mouseIsEntered = true;
 						$t.css('background-color', 'rgba(' + opts.bkgColor + ', 1)').addClass(opts.fadeOnHoverClass);
 					});
-					if (scrollAmount === 0 || alphaValue >= alphaCalcChange ) {
-						$t.on('mouseleave', function() {
+					
+					$t.on('mouseleave', function() {
+						if (scrollAmount === 0 || alphaValue >= alphaCalcChange ) {
 							$t.css('background-color', 'rgba(' + opts.bkgColor + ',' + alphaValue + ')').stop().delay(opts.removeOnHoverClassDelay).queue(function(){
                     			$t.removeClass(opts.fadeOnHoverClass).dequeue();
                     		});
-						});
-					} else if (scrollAmount !== 0 && alphaValue < alphaCalcChange) {
-						$t.on('mouseleave', function() {
+                    	} else if (scrollAmount !== 0 && alphaValue < alphaCalcChange) {
 							$t.css('background-color', 'rgba(' + opts.bkgColor + ',' + alphaCalcChange + ')').stop().delay(opts.removeOnHoverClassDelay).queue(function(){
-                    			$t.removeClass(opts.fadeOnHoverClass).dequeue();
-                    		});
-						});
-					}
+	                    		$t.removeClass(opts.fadeOnHoverClass).dequeue();
+	                    	});
+						}
+						mouseIsEntered = false;
+					});
+					
 				}
-				if (scroll == true && scrollAmount < itemHeight) {
+				if (scroll === true && scrollAmount < itemHeight && mouseIsEntered !== true) {
 					setTimeout(function() {				
 					    if (scrollAmount === 0 || alphaValue >= alphaCalcChange ) {
 					        alphaCalc = 'rgba(' + opts.bkgColor + ', ' + alphaValue + ')';
@@ -48,7 +51,7 @@
 						}
 					}, opts.refreshRate);
 					scroll = false;
-				} else if (scroll == true && scrollAmount >= itemHeight) {
+				} else if (scroll === true && scrollAmount >= itemHeight && mouseIsEntered !== true) {
 					$t.css('background-color', 'rgba(' + opts.bkgColor + ', 1)');
 				}
 			});
