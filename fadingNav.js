@@ -5,7 +5,7 @@
 		var $t, scrollAmount, alphaValue, alphaCalc, alphaCalcChange, itemHeight, mouseIsEntered;
 		this.each(function() {
 			$t = $(this);
-			$(window).on('load scroll', function(){
+			$(window).on('load scroll touchmove', function(){
 				scroll			= true;
 				mouseIsEntered	= false;
 				scrollAmount	= $(window).scrollTop();
