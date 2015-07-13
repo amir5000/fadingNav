@@ -34,6 +34,7 @@ $('.navbar').fadingNav({
 I have included all the basic features needed for v1.0
 
 ### To Do for v1.x:
+* Add better mobile scrolling effect.
 * Add better testing for the plugin.
 * Add a start and end class for more customization.
 * Add callback function cababilities when the and of the plugin functionality is reached and as well as when the begining is reached again.
