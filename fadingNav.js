@@ -7,8 +7,8 @@
 			$t = $(this);
 				$(window).on('load scroll', function(){
 					scroll			= true;
-					mouseIsEntered	= false;
-					scrollAmount	= $(window).scrollTop();
+					mouseIsEntered		= false;
+					scrollAmount		= $(window).scrollTop();
 					alphaCalc		= opts.bkgColor;
 					itemHeight		= opts.itemHeight.height();
 					alphaValue		= opts.alpha;
@@ -55,7 +55,6 @@
 						$t.css('background-color', 'rgba(' + opts.bkgColor + ', 1)');
 					}
 				});
-			
 			return this;
 		});
 	};
@@ -69,7 +68,7 @@
 	    fadeOnHoverClass: 'hover-class',
 	    removeOnHoverClassDelay: 200,
 	    enableBreakPoint: true,
-	   	breakPointClass: 'break-point',
-	   	breakPointValue: 0.5,
+	    breakPointClass: 'break-point',
+	    breakPointValue: 0.5,
 	};
 }( jQuery ));
