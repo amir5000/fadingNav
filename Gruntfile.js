@@ -17,7 +17,7 @@ module.exports = function(grunt) {
     uglify: {
       build: {
         files: {
-          'fadingNav.min.js': ['fadingNav.js']
+          'fadingNav.min.js': ['js/fadingNav.js']
         }
       }
     },
@@ -30,7 +30,7 @@ module.exports = function(grunt) {
         }
       },
       js: {
-        files: ['fadingNav.js'],
+        files: ['js/fadingNav.js'],
         tasks: ['uglify']
       }
     }

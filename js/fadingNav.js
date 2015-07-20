@@ -3,7 +3,7 @@
 		var scroll = false;
 		var opts = $.extend( {}, $.fn.fadingNav.defaults, options );
 		var $t, scrollAmount, alphaValue, alphaCalc, alphaCalcChange, itemHeight, mouseIsEntered;
-		this.each(function() {
+		this.each(function () {
 			$t = $(this);
 				$(window).on('load scroll', function(){
 					scroll			= true;
