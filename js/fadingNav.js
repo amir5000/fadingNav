@@ -31,7 +31,6 @@
 							}
 							mouseIsEntered = false;
 						});
-						
 					}
 					if (scroll === true && scrollAmount < itemHeight && mouseIsEntered !== true) {
 						setTimeout(function() {				

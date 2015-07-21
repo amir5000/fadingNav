@@ -39,3 +39,4 @@ I have included all the basic features needed for v1.0
 * Add a start and end class for more customization.
 * Add callback function cababilities when the and of the plugin functionality is reached and as well as when the begining is reached again.
 * Add a feature to revers the opacity direction to fade out instead of in.
+* Add better Grunt tasks (minify CSS).
