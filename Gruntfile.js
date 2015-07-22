@@ -5,9 +5,9 @@ module.exports = function(grunt) {
     less: {
       development: {
         options: {
-          compress: true,
           yuicompress: true,
-          optimization: 2
+          optimization: 2,
+          sourceMap:true
         },
         files: {
           "style.css": "less/style.less" // destination file and source file
@@ -21,6 +21,16 @@ module.exports = function(grunt) {
         }
       }
     },
+    cssmin: {
+      build: {
+        options: {
+          sourceMap:true
+        },
+        files: {
+          "style.min.css": "style.css"
+        }
+      }
+    },
     watch: {
       styles: {
         files: ['less/*.less'], // which files to watch
@@ -31,10 +41,13 @@ module.exports = function(grunt) {
       },
       js: {
         files: ['js/fadingNav.js'],
-        tasks: ['uglify']
+        tasks: ['uglify'],
+        options: {
+          nospawn: true
+        }
       }
     }
   });
 
-  grunt.registerTask('default', ['less', 'watch', 'uglify']);
+  grunt.registerTask('default', ['less', 'uglify', 'cssmin', 'watch']);
 };
