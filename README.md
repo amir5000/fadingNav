@@ -4,7 +4,7 @@ A jquery plugin to fade the NavBar as you scroll to include you need to follow t
 * 1. Include jQuery first.
 
 ```
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 ```
 
 * 2. Include the plugin after jQuery.
