@@ -3,12 +3,12 @@
 }
 .banner {
   height: 600px;
-  background-color: #89f5ff;
-  padding: 30px 20px;
+  padding: 50px 20px;
 }
 .container .jumbotron,
 .container-fluid .jumbotron {
-  padding-top: 50px;
+  padding-top: 0px;
+  border-radius: 0;
 }
 .hover-class {
   transition: all 0.2s linear;
@@ -20,6 +20,10 @@
 }
 .hover-class .navbar-toggle {
   border-color: #fff;
+}
+.navbar-default {
+  border-color: transparent;
+  padding-left: 25px;
 }
 .navbar-default .navbar-brand,
 .navbar-default .navbar-nav > .active > a,
