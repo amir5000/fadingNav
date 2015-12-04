@@ -1,18 +1,32 @@
 # fadingNav
 A jquery plugin to fade the NavBar as you scroll to include you need to follow the 3 steps below.
 
-* 1. Include jQuery first.
+* 1. Required HTML structure
+* 
+```
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <img alt="Brand" src="...">
+      </a>
+    </div>
+  </div>
+</nav>
+```
+
+* 2. Include jQuery first.
 
 ```
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 ```
 
-* 2. Include the plugin after jQuery.
+* 3. Include the plugin after jQuery.
 ```
 <script src="fadingNav.min.js"></script>
 ```
 
-* 3. Initialize the fadingNav plugin on the navbar selector you specify.
+* 4. Initialize the fadingNav plugin on the navbar selector you specify.
 
 ```
 $('.navbar').fadingNav();
