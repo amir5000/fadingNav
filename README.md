@@ -2,7 +2,7 @@
 A jquery plugin to fade the NavBar as you scroll to include you need to follow the 3 steps below.
 
 * 1. Required HTML structure
-* 
+
 ```
 <nav class="navbar navbar-default">
   <div class="container-fluid">
