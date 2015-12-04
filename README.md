@@ -5,10 +5,10 @@
 A jquery plugin to fade the NavBar as you scroll to include you need to follow the 4 steps below.
 
 
-* 1. Include your Nav HTML.
+* 1. Include your Fixed Nav HTML.
 
 ```html
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">
@@ -41,7 +41,7 @@ $('.navbar').fadingNav();
 
 * **bkgColor**: '0, 0, 0' - a string value for the background default color in RGB.
 * **alpha**: 0 - an int value from 0 - 1 to change the starting alpha opacity.
-* **itemHeight**: $(".banner") - the height of a container selector that once you reach the end of it the NavBar becomes 100% alpha.
+* **itemHeight**: $(window) - the height of a container selector that once you reach the end of it the NavBar becomes 100% alpha. Can be changed to be the height of any element.
 * **refreshRate**: 50 - change the scroll refresh rate, don't touch this unless you know what you are doing.
 * **fadeOnHover**: true - a boolean value to turn on or off the on hover feature.
 * **fadeOnHoverClass**: 'hover-class' - a string value with the class name when hovering on the NavBar.

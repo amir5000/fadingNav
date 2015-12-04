@@ -60,7 +60,7 @@
 	$.fn.fadingNav.defaults = {
 	    bkgColor: '0, 0, 0',
 	    alpha: 0,
-	    itemHeight: $(".banner"),
+	    itemHeight: $(window),
 	    refreshRate: 50,
 	    fadeOnHover: true,
 	    fadeOnHoverClass: 'hover-class',
