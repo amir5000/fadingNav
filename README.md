@@ -2,7 +2,7 @@
 
 **[DEMO1](http://amir5000.github.io/fadingNav/)**
 
-A jquery plugin to fade the NavBar as you scroll to include you need to follow the 4 steps below.
+A jQuery plugin to fade the NavBar as you scroll to include you need to follow the 4 steps below.
 
 
 * 1. Include your Fixed Nav HTML.
